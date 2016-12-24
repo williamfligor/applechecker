@@ -4,7 +4,7 @@ COPY stock.py .
 RUN apt-get update && apt-get install -y \
     python \
     python-pip \
- && pip install requests \
+ && pip install -r requirementx.txt \
  && rm -rf /var/lib/apt/lists/*
 
-CMD python -u stock.py $MODEL $ZIP $DEST $SEC $LOGIN $PASS
+CMD python -u stock.py $MODEL $ZIP $SEC
